@@ -340,7 +340,7 @@ int VideoPlayerHolder::GetStereoMode() const {
 
 bool VideoPlayerHolder::HasProjectionData() const {
   jbyte* projectionData = nullptr;
-  int size;
+  int size = 0;
   if (playerObj) {
     projectionData = JNIHelper::Get().CallByteArrayMethod(playerObj, getProjectionDataMethodID, &size);
   }
